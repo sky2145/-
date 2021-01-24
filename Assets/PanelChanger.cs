@@ -29,6 +29,14 @@ public class PanelChanger : MonoBehaviour
             case Panel.Panel1:
                 Show(Panel.Panel2);
                 break;
+            case Panel.Panel6:
+                Show(Panel.Panel7);
+                break;
+            case Panel.Panel7:
+                Show(Panel.Panel8);
+                break;
+
+
         }
     }
     public void OnLeftButton()
@@ -41,12 +49,56 @@ public class PanelChanger : MonoBehaviour
             case Panel.Panel2:
                 Show(Panel.Panel1);
                 break;
+            case Panel.Panel7:
+                Show(Panel.Panel6);
+                break;
+            case Panel.Panel8:
+                Show(Panel.Panel7);
+                break;
         }
-
     }
     public void OnBackButton()
     {
+        // Panel3 -> 0
+        // Panel4 -> 1
+        // Panel5 -> 2
+        switch (currentPanel)
+        {
+            case Panel.Panel3:
+                Show(Panel.Panel0);
+                break;
+            case Panel.Panel4:
+                Show(Panel.Panel1);
+                break;
+            case Panel.Panel5:
+                Show(Panel.Panel2);
+                break;
 
+        }
+    }
+
+    public void OnLocker()
+    {
+        Show(Panel.Panel3);
+    }
+
+    public void OnPig()
+    {
+        Show(Panel.Panel4);
+    }
+
+    public void OnBucket()
+    {
+        Show(Panel.Panel5);
+    }
+
+    public void OnHall2()
+    {
+        Show(Panel.Panel6);
+    }
+    public void OnHall6()
+    {
+        Show(Panel.Panel2);
     }
 
     void Show(Panel panel)
