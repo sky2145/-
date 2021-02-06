@@ -18,7 +18,18 @@ public class ItemBox : MonoBehaviour
 
     private void Start()
     {
-        SetItem(ItemManager.Item.Leaf);
+        // 初期化：全てのBoxをからにする
+        for (int i = 0; i < boxes.Length; i++)
+        {
+            boxes[i].SetActive(false);
+        }
+        /*
+        boxes[0].SetActive(false);
+        boxes[1].SetActive(false);
+        boxes[2].SetActive(false);
+        boxes[3].SetActive(false);
+        boxes[4].SetActive(false);
+        */
     }
 
     public void SetItem(ItemManager.Item item)

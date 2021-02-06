@@ -13,4 +13,16 @@ public class ItemManager : MonoBehaviour
         Paper,
     }
 
+    public Item item;
+
+    // クリックされた時に、
+    public void OnTihs()
+    {
+        // ・消す
+        gameObject.SetActive(false);
+
+        // ・ItemBoxに追加する
+        ItemBox.instance.SetItem(item);
+    }
+
 }
